@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1600, height=2000" />
+    <title>Doncafe Elita - Infografic Tarie</title>
+    <script src="gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1600px;
+        height: 2000px;
+        overflow: hidden;
+        background: #6d1626;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-family: "Poppins", Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+      .clip {
+        position: absolute;
+        inset: 0;
+      }
+      #bg {
+        background:
+          radial-gradient(ellipse 1100px 900px at 50% 30%, #7c1c2c 0%, #6d1626 55%, #5c101f 100%);
+      }
+      .swirl {
+        position: absolute;
+        border-radius: 50%;
+        border: 26px solid rgba(255, 255, 255, 0.035);
+      }
+      .swirl.s1 { width: 1400px; height: 1400px; left: -350px; top: -520px; }
+      .swirl.s2 { width: 1700px; height: 1700px; left: -650px; top: -300px; border-color: rgba(255,255,255,0.025); }
+      .swirl.s3 { width: 1100px; height: 1100px; left: -150px; top: -680px; }
+
+      #content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 150px;
+      }
+
+      #tarie-label {
+        color: #f2d49b;
+        font-size: 46px;
+        font-weight: 600;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+      }
+
+      #beans-row {
+        display: flex;
+        gap: 22px;
+        margin-top: 34px;
+      }
+      .bean {
+        width: 74px;
+        height: 108px;
+      }
+
+      #tarie-score {
+        margin-top: 26px;
+        color: #fbeecd;
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 3px;
+      }
+
+      #tagline {
+        margin-top: 46px;
+        color: #ffffff;
+        font-size: 72px;
+        font-weight: 800;
+        text-align: center;
+        line-height: 1.08;
+        text-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+      }
+
+      #cup-wrap {
+        position: relative;
+        margin-top: 70px;
+        width: 480px;
+        height: 480px;
+      }
+
+      #callouts-row {
+        display: flex;
+        justify-content: center;
+        gap: 90px;
+        margin-top: 8px;
+      }
+      .callout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .connector-tick {
+        width: 3px;
+        height: 34px;
+        background: #f2d49b;
+        margin-bottom: 14px;
+      }
+      .callout-label {
+        color: #fbeecd;
+        font-size: 42px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      #footer {
+        position: absolute;
+        bottom: 120px;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+      #footer-mark {
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 30px;
+        letter-spacing: 6px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="tarie"
+      data-start="0"
+      data-width="1600"
+      data-height="2000"
+      data-duration="1"
+    >
+      <section id="bg" class="clip" data-start="0" data-duration="1" data-layout-allow-overflow>
+        <div class="swirl s1"></div>
+        <div class="swirl s2"></div>
+        <div class="swirl s3"></div>
+      </section>
+
+      <section id="content" class="clip" data-start="0" data-duration="1">
+        <div id="tarie-label">Tărie</div>
+
+        <div id="beans-row">
+          <svg class="bean" viewBox="0 0 74 108"><path d="M37 2C58 2 72 26 72 54C72 82 58 106 37 106C16 106 2 82 2 54C2 26 16 2 37 2Z" fill="#f2d49b"/><path d="M37 8C33 30 33 78 37 100" stroke="#6d1626" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
+          <svg class="bean" viewBox="0 0 74 108"><path d="M37 2C58 2 72 26 72 54C72 82 58 106 37 106C16 106 2 82 2 54C2 26 16 2 37 2Z" fill="#f2d49b"/><path d="M37 8C33 30 33 78 37 100" stroke="#6d1626" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
+          <svg class="bean" viewBox="0 0 74 108"><path d="M37 2C58 2 72 26 72 54C72 82 58 106 37 106C16 106 2 82 2 54C2 26 16 2 37 2Z" fill="#f2d49b"/><path d="M37 8C33 30 33 78 37 100" stroke="#6d1626" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
+          <svg class="bean" viewBox="0 0 74 108"><path d="M37 2C58 2 72 26 72 54C72 82 58 106 37 106C16 106 2 82 2 54C2 26 16 2 37 2Z" fill="#f2d49b"/><path d="M37 8C33 30 33 78 37 100" stroke="#6d1626" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
+          <svg class="bean" viewBox="0 0 74 108"><path d="M37 2C58 2 72 26 72 54C72 82 58 106 37 106C16 106 2 82 2 54C2 26 16 2 37 2Z" fill="#f2d49b"/><path d="M37 8C33 30 33 78 37 100" stroke="#6d1626" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
+        </div>
+
+        <div id="tarie-score">5 / 5</div>
+
+        <div id="tagline">Puternică<br />și Savuroasă</div>
+
+        <div id="cup-wrap">
+          <svg viewBox="0 0 480 480" width="480" height="480">
+            <path d="M185 55 C165 90 200 100 190 135" stroke="#f2d49b" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.85"/>
+            <path d="M240 42 C220 82 260 92 248 130" stroke="#f2d49b" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.85"/>
+            <path d="M300 55 C280 90 315 100 302 135" stroke="#f2d49b" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.85"/>
+            <ellipse cx="240" cy="255" rx="132" ry="116" fill="#c81f38"/>
+            <ellipse cx="240" cy="230" rx="116" ry="46" fill="#3a0d12"/>
+            <path d="M358 216 C420 216 420 296 358 296" stroke="#c81f38" stroke-width="26" fill="none" stroke-linecap="round"/>
+            <ellipse cx="240" cy="362" rx="156" ry="20" fill="#4a0d16"/>
+          </svg>
+        </div>
+
+        <div id="callouts-row">
+          <div class="callout">
+            <div class="connector-tick"></div>
+            <div class="callout-label">dulce-<br />amărui</div>
+          </div>
+          <div class="callout">
+            <div class="connector-tick"></div>
+            <div class="callout-label">ușor<br />condimentat</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="footer" class="clip" data-start="0" data-duration="1">
+        <div id="footer-mark">Doncafé · Elita</div>
+      </section>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["tarie"] = tl;
+    </script>
+  </body>
+</html>

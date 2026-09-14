@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1600, height=2000" />
+    <title>Doncafe Elita vs Elita Crema - Comparatie</title>
+    <script src="gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1600px;
+        height: 2000px;
+        overflow: hidden;
+        background: #f1ede6;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-family: "Poppins", Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+      .clip { position: absolute; inset: 0; }
+
+      #heading {
+        position: absolute;
+        top: 110px;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+      #heading h1 {
+        color: #3a2a1e;
+        font-size: 54px;
+        font-weight: 800;
+      }
+      #heading p {
+        margin-top: 14px;
+        color: #8a7a6a;
+        font-size: 30px;
+        font-weight: 500;
+      }
+
+      #cards {
+        position: absolute;
+        top: 320px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 140px;
+      }
+
+      .card {
+        width: 540px;
+        height: 1000px;
+        border-radius: 26px;
+        position: relative;
+        box-shadow: 0 30px 60px rgba(0,0,0,0.18);
+        overflow: hidden;
+      }
+      .card.elita { background: linear-gradient(160deg, #8c2135 0%, #6d1626 60%, #5c101f 100%); }
+      .card.crema { background: linear-gradient(160deg, #d9a441 0%, #c1832a 60%, #a56c1e 100%); }
+
+      .beans {
+        position: absolute;
+        top: -30px;
+        right: -30px;
+        width: 260px;
+        height: 220px;
+      }
+
+      .medallion {
+        position: absolute;
+        top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 340px;
+        height: 340px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 35% 30%, #ffe9ad, #c8992f 70%, #9c7420 100%);
+        border: 6px solid #f4dc9c;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+      }
+      .medallion .momentul { color: #4a3418; font-size: 20px; letter-spacing: 3px; font-weight: 600; }
+      .medallion .doncafe { color: #1c4a34; font-size: 40px; font-weight: 800; margin-top: 6px; }
+      .medallion .line { color: #7c1c2c; font-size: 32px; font-weight: 800; margin-top: 4px; }
+
+      .cupicon { position: absolute; top: 560px; left: 50%; transform: translateX(-50%); width: 220px; height: 220px; }
+
+      .cardlabel {
+        position: absolute;
+        bottom: 60px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 0 30px;
+      }
+      .cardlabel .line1 { color: #ffffff; font-size: 34px; font-weight: 800; }
+      .cardlabel .line2 { margin-top: 10px; color: rgba(255,255,255,0.88); font-size: 26px; font-weight: 500; }
+
+      #footer {
+        position: absolute;
+        bottom: 90px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: #8a7a6a;
+        font-size: 26px;
+        letter-spacing: 4px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="comparatie" data-start="0" data-width="1600" data-height="2000" data-duration="1">
+      <section id="heading" class="clip" data-start="0" data-duration="1">
+        <h1>Elita sau Elita Crema?</h1>
+        <p>Alege intensitatea potrivită pentru tine</p>
+      </section>
+
+      <section id="cards" class="clip" data-start="0" data-duration="1">
+        <div class="card elita">
+          <svg class="beans" viewBox="0 0 260 220"><g fill="#3a0d12">
+            <ellipse cx="60" cy="40" rx="30" ry="22" transform="rotate(-20 60 40)"/>
+            <ellipse cx="110" cy="25" rx="30" ry="22" transform="rotate(10 110 25)"/>
+            <ellipse cx="160" cy="45" rx="30" ry="22" transform="rotate(-15 160 45)"/>
+            <ellipse cx="205" cy="20" rx="28" ry="20" transform="rotate(20 205 20)"/>
+            <ellipse cx="85" cy="75" rx="28" ry="20" transform="rotate(5 85 75)"/>
+            <ellipse cx="140" cy="85" rx="28" ry="20" transform="rotate(-10 140 85)"/>
+            <ellipse cx="190" cy="80" rx="26" ry="18" transform="rotate(15 190 80)"/>
+          </g></svg>
+          <div class="medallion">
+            <div class="momentul">MOMENTUL TĂU</div>
+            <div class="doncafe">DONCAFÉ</div>
+            <div class="line">Elita</div>
+          </div>
+          <svg class="cupicon" viewBox="0 0 220 220">
+            <ellipse cx="110" cy="120" rx="60" ry="52" fill="#c81f38"/>
+            <ellipse cx="110" cy="108" rx="52" ry="20" fill="#3a0d12"/>
+            <path d="M165 100 C200 100 200 145 165 145" stroke="#c81f38" stroke-width="14" fill="none" stroke-linecap="round"/>
+            <path d="M85 30 C70 55 95 60 88 82" stroke="#f2d49b" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.8"/>
+            <path d="M110 22 C95 48 122 55 114 78" stroke="#f2d49b" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.8"/>
+          </svg>
+          <div class="cardlabel">
+            <div class="line1">Tărie 5/5</div>
+            <div class="line2">tradițional, ideal la ibric</div>
+          </div>
+        </div>
+
+        <div class="card crema">
+          <svg class="beans" viewBox="0 0 260 220"><g fill="#3a1f0d">
+            <ellipse cx="60" cy="40" rx="30" ry="22" transform="rotate(-20 60 40)"/>
+            <ellipse cx="110" cy="25" rx="30" ry="22" transform="rotate(10 110 25)"/>
+            <ellipse cx="160" cy="45" rx="30" ry="22" transform="rotate(-15 160 45)"/>
+            <ellipse cx="205" cy="20" rx="28" ry="20" transform="rotate(20 205 20)"/>
+            <ellipse cx="85" cy="75" rx="28" ry="20" transform="rotate(5 85 75)"/>
+            <ellipse cx="140" cy="85" rx="28" ry="20" transform="rotate(-10 140 85)"/>
+            <ellipse cx="190" cy="80" rx="26" ry="18" transform="rotate(15 190 80)"/>
+          </g></svg>
+          <div class="medallion">
+            <div class="momentul">MOMENTUL TĂU</div>
+            <div class="doncafe">DONCAFÉ</div>
+            <div class="line">Elita CREMA</div>
+          </div>
+          <svg class="cupicon" viewBox="0 0 220 220">
+            <ellipse cx="110" cy="120" rx="60" ry="52" fill="#e0a52f"/>
+            <ellipse cx="110" cy="108" rx="52" ry="20" fill="#4a2c0d"/>
+            <ellipse cx="110" cy="96" rx="48" ry="14" fill="#f0c96a"/>
+            <path d="M165 100 C200 100 200 145 165 145" stroke="#e0a52f" stroke-width="14" fill="none" stroke-linecap="round"/>
+            <path d="M85 30 C70 55 95 60 88 82" stroke="#fff2cf" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.85"/>
+            <path d="M110 22 C95 48 122 55 114 78" stroke="#fff2cf" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.85"/>
+          </svg>
+          <div class="cardlabel">
+            <div class="line1">Crema densă</div>
+            <div class="line2">ideal la espressor automat</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="footer" class="clip" data-start="0" data-duration="1">Doncafé · Gama Elita</section>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["comparatie"] = tl;
+    </script>
+  </body>
+</html>
